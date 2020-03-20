@@ -1,5 +1,4 @@
-/*
- *Prompt: Using only basic arithmetic and a random number generator approximate
+/*Prompt: Using only basic arithmetic and a random number generator approximate
  *Pi.
  */
 package main
@@ -22,8 +21,8 @@ func estimatePi(n int) float64 {
 	var numPointsInSquare float64 = float64(n)
 	mr.Seed(t.Now().UnixNano())
 	for i := 0; i < n; i++ {
-		pointX := mr.Float32()
-		pointY := mr.Float32()
+		pointX := mr.Float64()
+		pointY := mr.Float64()
 		distance := (pointX * pointX) + (pointY * pointY)
 
 		if distance < 1 {
